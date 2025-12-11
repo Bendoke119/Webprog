@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function hasonlit()
+    {
+        var a = parseInt(document.egyagu.fizetes.value);
+        var minfiz = 256000;
+        if(minfiz!=a)
+        alert("Ön nem minimálbért kapja!");
+        document.egyagu.fizetes.value="";
+    }
+    function hasonlitk()
+    {
+        var a = parseInt(document.egyagu.fizetes.value);
+        var minkap = 256000;
+        if(minkap<a)
+        {
+        alert("Ön nem minimálbért kapja!");
+        }
+        else
+        {
+            alert("Ön minimálbért kapja!");
+        }
+        document.egyagu.fizetes.value="";
+    }
+    </script>
+</head>
+<body>
+    <form name="egyagu">
+        <input type="text" name="fizetes">
+        <h1>
+            Fizetés
+        </h1><br>
+        <h1>egyagu</h1>
+        <input type="button" value="Hasonlítsd" onclick="hasonlit()">
+        <h2>keteagu</h2>
+        <input type="button" value="Hasonlítsd k" onclick="hasonlitk()">
+    </form>
+</body>
+</html>
